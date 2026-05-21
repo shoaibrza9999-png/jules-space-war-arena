@@ -20,6 +20,13 @@
             "hypothesis": "Implementing specialized interception logic for comet planets provides a late-game production advantage.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "58.13%"
+        },
+        {
+            "generation": 4,
+            "strategy_title": "Solar Evasion Waypointing",
+            "hypothesis": "Calculating tangent vectors to avoid the sun instead of aborting the attack opens up previously blocked tactical trajectories.",
+            "brief_documentation": "No operational brief provided.",
+            "win_rate_metric": "56.67%"
         }
     ]
 }
