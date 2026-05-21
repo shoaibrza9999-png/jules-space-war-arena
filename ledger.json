@@ -62,6 +62,13 @@
             "hypothesis": "Routing idle ships from secure interior planets to frontline planets under attack prevents resource loss and bolsters overall fleet survivability.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "56.0%"
+        },
+        {
+            "generation": 11,
+            "strategy_title": "Scorched Earth Counter-Attack",
+            "hypothesis": "Forcing planets under unavoidable siege to launch all their remaining ships at enemy targets guarantees value extraction before falling.",
+            "brief_documentation": "No operational brief provided.",
+            "win_rate_metric": "55.0%"
         }
     ]
 }
