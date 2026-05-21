@@ -1,3 +1,11 @@
 {
-    "history": []
+    "history": [
+        {
+            "generation": 1,
+            "strategy_title": "Send Minimum Viable Force",
+            "hypothesis": "Sending exactly (future_garrison + 1) ships instead of a fixed fraction will minimize over-committing.",
+            "brief_documentation": "**Strategy Brief: Send Minimum Viable Force**\nThis update refines the agent's attacking logic by calculating the exact `future_garrison + 1` ships required to capture a target. Instead of sending a fixed fraction of available ships, this minimizes over-committing forces to a single target. By conserving ships, the agent can distribute its fleet more efficiently across multiple objectives.",
+            "win_rate_metric": "55.0%"
+        }
+    ]
 }

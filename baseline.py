@@ -81,30 +81,27 @@ def agent(observation, configuration):
             for t in target_planets:
                 if t[0] in comet_ids: continue 
                 
-                for fraction in [1.0, 0.5]:
-                    ships_to_send = int(available_ships * fraction)
-                    if ships_to_send <= 0: continue
+                angle, dt = compute_intercept(p, t, available_ships)
+                
+                future_garrison = t[5]
+                if t[1] != -1:
+                    future_garrison += t[6] * int(dt)
                     
-                    angle, dt = compute_intercept(p, t, ships_to_send)
-                    tx, ty = predict_position(t, dt)
-                    
-                    if path_intersects_sun(p[2], p[3], tx, ty):
-                        continue
-                        
-                    future_garrison = t[5]
-                    if t[1] != -1:
-                        future_garrison += t[6] * int(dt)
-                        
-                    if ships_to_send > future_garrison + 3: 
-                        
-                        enemy_bonus = 1.5 if t[1] != -1 else 1.0
-                        score = (t[6] * enemy_bonus) / max(1, dt)
-                        
-                        if score > best_score:
-                            best_score = score
-                            best_target = t
-                            best_angle = angle
-                            best_ships = ships_to_send
+                ships_to_send = future_garrison + 1
+                
+                if ships_to_send <= 0 or ships_to_send > available_ships: continue
+                
+                angle, dt = compute_intercept(p, t, ships_to_send)
+                tx, ty = predict_position(t, dt)
+                
+                if not path_intersects_sun(p[2], p[3], tx, ty):
+                    enemy_bonus = 1.5 if t[1] != -1 else 1.0
+                    score = (t[6] * enemy_bonus) / max(1, dt)
+                    if score > best_score:
+                        best_score = score
+                        best_target = t
+                        best_angle = angle
+                        best_ships = ships_to_send
                             
             if best_target:
                 actions.append([p[0], best_angle, best_ships])
