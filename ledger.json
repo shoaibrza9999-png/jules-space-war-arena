@@ -34,6 +34,13 @@
             "hypothesis": "Since speed scales logarithmically with fleet size, grouping small dispatches into a single larger fleet improves ETA and interception success.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "55.62%"
+        },
+        {
+            "generation": 6,
+            "strategy_title": "Production-Weighted Scoring",
+            "hypothesis": "Squaring the production rate in the target scoring formula prioritizes high-yield planets, compounding late-game advantages.",
+            "brief_documentation": "# Production-Weighted Scoring\nThis module implements the Production-Weighted Scoring strategy for targeting planets. \nBy squaring the production rate in the score formula, it heavily prioritizes high-yield planets.\nThis approach compounds late-game advantages by ensuring we capture the most valuable resources.",
+            "win_rate_metric": "56.11%"
         }
     ]
 }
