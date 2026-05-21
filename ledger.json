@@ -27,6 +27,13 @@
             "hypothesis": "Calculating tangent vectors to avoid the sun instead of aborting the attack opens up previously blocked tactical trajectories.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "56.67%"
+        },
+        {
+            "generation": 5,
+            "strategy_title": "Speed-Optimized Batches",
+            "hypothesis": "Since speed scales logarithmically with fleet size, grouping small dispatches into a single larger fleet improves ETA and interception success.",
+            "brief_documentation": "No operational brief provided.",
+            "win_rate_metric": "55.62%"
         }
     ]
 }

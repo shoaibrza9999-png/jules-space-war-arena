@@ -42,6 +42,7 @@ def agent(observation, configuration):
         return x, y
 
     def compute_intercept(p, t, ships):
+        ships = max(ships, 50)
         speed = 1.0 + (maxSpeed - 1.0) * ((math.log(max(1, ships)) / math.log(1000)) ** 1.5)
         dt = 0
         for _ in range(10):
@@ -49,7 +50,7 @@ def agent(observation, configuration):
             dist = math.hypot(tx - p[2], ty - p[3])
             dt = dist / speed
         tx, ty = predict_position(t, dt)
-        return math.atan2(ty - p[3], tx - p[2]), dt
+        return math.atan2(ty - p[3], tx - p[2]), dt, ships
 
     def path_intersects_sun(px, py, tx, ty):
         dx = tx - px
