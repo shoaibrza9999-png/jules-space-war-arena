@@ -13,6 +13,13 @@
             "hypothesis": "Tracking incoming friendly fleets to a target reduces redundant ship dispatches and allows multiple planets to coordinate.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "56.0%"
+        },
+        {
+            "generation": 3,
+            "strategy_title": "Comet Resource Harvesting",
+            "hypothesis": "Implementing specialized interception logic for comet planets provides a late-game production advantage.",
+            "brief_documentation": "No operational brief provided.",
+            "win_rate_metric": "58.13%"
         }
     ]
 }
