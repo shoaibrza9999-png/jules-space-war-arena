@@ -55,6 +55,13 @@
             "hypothesis": "Replacing the linear 1/dt distance penalty with an exponential decay function prevents fleets from over-committing to distant targets where orbital mechanics make intercepts unpredictable.",
             "brief_documentation": "No operational brief provided.",
             "win_rate_metric": "55.0%"
+        },
+        {
+            "generation": 9,
+            "strategy_title": "Defensive Reinforcement Dispatch",
+            "hypothesis": "Routing idle ships from secure interior planets to frontline planets under attack prevents resource loss and bolsters overall fleet survivability.",
+            "brief_documentation": "No operational brief provided.",
+            "win_rate_metric": "56.0%"
         }
     ]
 }
